@@ -2,8 +2,7 @@ version: '3'
 
 services:
   demo-api-pg:
-    build: .
-    image: golang:1.14
+    image: golang:1.15
     volumes:
       - .:/go/src/
       - ./.netrc:/root/.netrc
@@ -20,7 +19,7 @@ services:
     container_name: secureai-dev-demo-api-pg
     entrypoint: go run main.go
   postgres:
-    image: postgres:12
+    image: postgres:13
     ports:
       - "7000:5432"
     volumes:

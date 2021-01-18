@@ -13,6 +13,7 @@ type UserInfo struct {
 	UID        int64  `pg:"uid,omitempty" json:"uid,omitempty"`
 	Username   string `pg:"username" json:"username"`      // username
 	Nickname   string `pg:"nickname" json:"nickname"`      // nickname
+	Password   string `pg:"password" json:"password"`      // password
 	Email      string `pg:"email" json:"email"`            // email
 	CreateTime int64  `pg:"create_time" json:"createTime"` // create time
 	UpdateTime int64  `pg:"update_time" json:"updateTime"` // update time
