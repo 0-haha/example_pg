@@ -187,6 +187,7 @@ github.com/rs/zerolog v1.15.0/go.mod h1:xYTKnLHcpfU2225ny5qZjxnj9NvkumZYjJHlAThC
 github.com/satori/go.uuid v1.2.0/go.mod h1:dA0hQrYB0VpLJoorglMZABFdXlWrHn1NEOzdhQKdks0=
 github.com/secure-for-ai/secureai-microsvs v0.1.1 h1:yrVHzO6kcuJxhUTO0vf/89o8xVj6qs3UjeBqv8LG7gY=
 github.com/secure-for-ai/secureai-microsvs v0.1.1/go.mod h1:fz0WfosUnCk4Uc0TBtrMYDcw86JAt/MwI4wfvNr4MRg=
+github.com/secure-for-ai/secureai-microsvs v0.1.2/go.mod h1:ImSY9WpR2zoQgy49hM8NV486m/3n7M33HwNUvaH5cos=
 github.com/shopspring/decimal v0.0.0-20180709203117-cd690d0c9e24/go.mod h1:M+9NzErvs504Cn4c5DxATwIqPbtswREoFCre64PpcG4=
 github.com/shopspring/decimal v0.0.0-20200227202807-02e2044944cc h1:jUIKcSPO9MoMJBbEoyE/RJoE8vz7Mb8AjvifMMwSyvY=
 github.com/shopspring/decimal v0.0.0-20200227202807-02e2044944cc/go.mod h1:DKyhrW/HYNuLGql+MJL6WCR6knT2jwCFRcu2hWCYk4o=
