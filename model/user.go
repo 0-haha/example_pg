@@ -150,7 +150,7 @@ func ListUser(username string, page, perPage int64) (count int64, users *[]UserI
 	}
 	defer tx.RollBackDefer(ctx)
 	users = &[]UserInfo{}
-	err = tx.FindAll(ctx,
+	_, err = tx.FindAll(ctx,
 		"SELECT * FROM "+constant.TableUser+" WHERE username LIKE $1 ORDER BY uid ASC LIMIT $2 OFFSET $3;",
 		users, "%"+username+"%", perPage, (page-1)*perPage)
 	if err != nil {
