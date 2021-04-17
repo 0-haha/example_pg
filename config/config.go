@@ -3,7 +3,7 @@ package config
 import (
 	"encoding/json"
 	"github.com/secure-for-ai/secureai-microsvs/cache"
-	"github.com/secure-for-ai/secureai-microsvs/db"
+	"github.com/secure-for-ai/secureai-microsvs/db/pgdb"
 	"github.com/secure-for-ai/secureai-microsvs/session"
 	"github.com/secure-for-ai/secureai-microsvs/snowflake"
 	"github.com/secure-for-ai/secureai-microsvs/util"
@@ -14,7 +14,7 @@ import (
 )
 
 type Config struct {
-	Postgres  db.PGPoolConf
+	Postgres  pgdb.PGPoolConf
 	Redis     cache.RedisConf
 	Session   session.HybridStoreConf
 	Snowflake snowflake.NodeConf
@@ -22,7 +22,7 @@ type Config struct {
 }
 
 var Conf *Config
-var PGClient *db.PGClient
+var PGClient *pgdb.PGClient
 var RedisClient *cache.RedisClient
 var SessionStore *session.HybridStore
 var SnowflakeNode *snowflake.Node
@@ -111,7 +111,7 @@ func initConf() {
 func initPG() {
 	log.Println("Begin init Postgres")
 
-	client, err := db.NewPGClient(Conf.Postgres)
+	client, err := pgdb.NewPGClient(Conf.Postgres)
 
 	if err != nil {
 		log.Println("unable to init Postgres")
